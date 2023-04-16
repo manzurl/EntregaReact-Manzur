@@ -9,6 +9,8 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     //Funaciona de incrementar el valor con validacion
     if (quantity < stock) {
       setQuantity(quantity + 1);
+    } else {
+      alert("No hay mas unidades en stock");
     }
   };
 
