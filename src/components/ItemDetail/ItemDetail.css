@@ -5,11 +5,11 @@
   align-items: center;
   width: 20%;
   height: auto;
-  max-height: 42rem;
 }
 .ItemImg {
+  width: 50%;
   max-width: 90%;
   width: auto;
   height: auto;
-  max-height: 40%;
+  max-height: 50%;
 }
