@@ -28,15 +28,7 @@ const products = [
     stock: 5,
     description: "Extintor ABC de 1 kg para tu vehiculo",
   },
-  {
-    id: "3",
-    name: "Extintor ABC 1 Kg",
-    price: 2500,
-    category: "Extintores",
-    img: "https://http2.mlstatic.com/D_NQ_NP_755740-MLA54435361632_032023-O.webp",
-    stock: 5,
-    description: "Extintor ABC de 1 kg para tu vehiculo",
-  },
+
   {
     id: "4",
     name: "Extintor Co2 3.5 Kg",
@@ -93,11 +85,19 @@ export const getProducts = () => {
   });
 };
 
-export const getProductById = (productId) => {
+export const getProductById = (itemId) => {
   //devuelve un producto que estamos buscando
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(products.find((prod) => prod.id === productId));
+      resolve(products.find((prod) => prod.id === itemId));
+    }, 500);
+  });
+};
+
+export const getProductsByCategory = (categoryId) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(products.filter((cat) => cat.category === categoryId));
     }, 500);
   });
 };
